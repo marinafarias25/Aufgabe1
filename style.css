@@ -1,14 +1,13 @@
 body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: 'Orbitron', sans-serif;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
-    overflow: hidden;
+    margin: 0;                /* Kein Außenabstand */
+    padding: 0;               /* Kein Innenabstand */
+    height: 100%;             /* Ganze Fensterhöhe */
+    font-family: 'Orbitron', sans-serif;  /* Schriftart */
+    color: white;             /* Standardtextfarbe */
+    display: flex;            /* Flexbox für Zentrierung */
+    justify-content: center; /* Horizontal zentrieren */
+    align-items: center;     /* Vertikal zentrieren */
+    overflow: hidden;        /* Scrollen verhindern */
 }
 
 .background {
@@ -30,18 +29,6 @@ body, html {
     padding: 20px;
 }
 
-.main-title {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.subtitle {
-    font-size: 64px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
 .red-instruction {
     font-size: 50px; 
     color: red;
@@ -60,6 +47,7 @@ body, html {
     flex-wrap: wrap;
     gap: 10px;
     margin: 20px 0;
+    
 }
 
 .number-inputs input {
@@ -69,8 +57,8 @@ body, html {
     text-align: center;
     border-radius: 5px;
     border: 3px solid rgb(0, 0, 0);
-    background: rgba(239, 49, 49, 0.1);
-    color: rgb(255, 255, 255);
+    background: rgba(242, 242, 242, 0.1);
+    color: rgb(0, 0, 0);
 }
 
 .call-button {
@@ -99,6 +87,30 @@ body, html {
     padding: 15px;
     border-radius: 10px;
 }
+
+#error-message.hidden {
+    background: rgba(255, 0, 0, 0.15); /* leicht roter Hintergrund */
+    color: #ff3333;                   /* kräftiges Rot für den Text */
+    font-size: 22px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+    display: none; /* Start: unsichtbar */
+}
+#error-message{
+    background: rgba(0, 0, 0, 0.15); /* leicht roter Hintergrund */
+    color: #ffffff;                   /* kräftiges Rot für den Text */
+    font-size: 22px;
+    font-weight: bold;
+    padding: 12px 20px;
+    
+    margin-top: 20px;
+    text-align: center;
+}
+
 @keyframes warningBlink {
     0%, 100% {
         color: red;
